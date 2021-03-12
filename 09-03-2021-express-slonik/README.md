@@ -50,10 +50,13 @@
 
 ### Directors
 
-1. Devuelve el `name` de todos los directores cuyo campo `name` no esté vacío
-2. Devuelve `query_name` y sus correspondientes `nicknames`
-3. Devuelve `pic` y `nickname` de todos aquellos directores que tengan `nickname`
-4. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen canadiense.
+1. Devuelve el `name` de todos los directores cuyo campo `name` no esté vacío. SELECT name
+FROM directors
+WHERE name is NOT NULL
+2. Devuelve `query_name` y sus correspondientes `nicknames` SELECT name, query_name
+FROM directors
+3. Devuelve `pic` y `nickname` de todos aquellos directores que tengan `nickname` SELECT pic, nickname FROM directors WHERE nickname is 'pic'
+4. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen canadiense. SELECT query_name, nationality
 5. Devuelve `query_name` y nacionalidad de todos aquellos directores que sean de origen británico-estadounidense (vigila cómo están guardados esos datos. Tienen que ser las dos cosas juntas)
 6. Devuelve `query_name`, nacionalidad y roles de aquellos directores que sean ajedrecistas
 7. Devuelve `query_name`, `name` y nacionalidad de aquellos directores que tengan, al menos, dos nacionalidades

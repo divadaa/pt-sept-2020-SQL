@@ -8,6 +8,8 @@ const app = express()
 // Main route passing db configuration as argument because THAT 'require' returns a function
 app.use('/', require('./services')(db))
 
+
+
 // Middleware in case no routes matching
 app.use((_, __, next) => {
   next(new Error('path not found'))
